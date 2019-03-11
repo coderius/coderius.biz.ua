@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "514407afcec2f865a66633c10958dc48",
+    "content-hash": "490d5b35df46c00cab2bdbbfbf15d667",
     "packages": [
         {
             "name": "2amigos/yii2-tinymce-widget",
@@ -490,6 +490,43 @@
                 "yii2"
             ],
             "time": "2018-07-01T19:21:20+00:00"
+        },
+        {
+            "name": "coderius/yii2-live-comments",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "C:/Users/coder/Desktop/www/yii2-ext/yii2-live-comments",
+                "reference": "3f40a72a08a8701922b79a8aac5731f1294776c2",
+                "shasum": null
+            },
+            "require": {
+                "php": ">=5.6.0",
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "coderius\\comments\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Serg Coderius",
+                    "email": "sunrise4fun@gmail.com"
+                }
+            ],
+            "description": "yii2 live comments extention",
+            "keywords": [
+                "comments",
+                "yii2"
+            ]
         },
         {
             "name": "ezyang/htmlpurifier",

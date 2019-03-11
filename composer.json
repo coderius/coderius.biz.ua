@@ -25,7 +25,8 @@
         "2amigos/yii2-tinymce-widget": "~1.1",
         "lysenkobv/yii2-geoip": "~1.0",
         "coderius/yii2-jqcloud2-widget": "@dev",
-        "coderius/yii2-lightbox2-widget": "@dev"
+        "coderius/yii2-lightbox2-widget": "@dev",
+        "coderius/yii2-live-comments": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
@@ -45,7 +46,7 @@
         
         {
             "type": "path",
-            "url": "/opt/lampp/htdocs/yii2-extentions/yii2-highlight-js"
+            "url": "C:/Users/coder/Desktop/www/yii2-ext/yii2-live-comments"
         }
         
     ],

@@ -96,14 +96,14 @@ use common\components\rbac\Rbac;
                 <?php foreach ($nav as $item): ?>
                 <?php if ($item->isActive()): ?>
                 <li class="pMenu">
-                    <a class="<?= \Yii::$app->fragmentHeader->isCurrentUrl($item->url) ? 'activeItem' : ''; ?>" href="<?php echo Url::to($item->url); ?>"><?php echo $item->title; ?></a>
+                    <a class="<?= \Yii::$app->fragmentHeader->isCurrentUrl($item->url) ? 'activeItem' : ''; ?>" href="<?php echo Url::toRoute($item->url); ?>"><?php echo $item->title; ?></a>
                     
                     <!--subMenu_moby_show включаем в js для моби версии-->
                     <?php if ($item->hasChildren()): ?>
                     <i class="fa fa-chevron-right toggleChevron"></i>
                     <ul class="subMenu">
                         <?php foreach ($item->children as $subItem): ?>
-                            <li><a class="<?= \Yii::$app->fragmentHeader->isCurrentUrl($subItem->url) ? 'activeSubItem' : ''; ?>" href="<?php echo Url::to($subItem->url); ?>"><?php echo $subItem->title; ?></a></li>
+                            <li><a class="<?= \Yii::$app->fragmentHeader->isCurrentUrl($subItem->url) ? 'activeSubItem' : ''; ?>" href="<?php echo Url::toRoute($subItem->url); ?>"><?php echo $subItem->title; ?></a></li>
                         <?php endforeach; ?>
                     </ul>
                     <?php endif; ?>

@@ -113,14 +113,20 @@ $conf = [
     ],
 ];
 
-if (!YII_WORK_SERVER) {
     $conf['modules']['comments'] = [
-            'class' => 'modules\comments\Module',
-            'accessPlan' => modules\comments\Module::ACCESSPLAN_ALL,
+            'class' => 'coderius\comments\Module',
         ];
 
-    $conf['bootstrap'][] = 'modules\comments\Bootstrap';
-}
+    // $conf['bootstrap'][] = 'modules\comments\Bootstrap';
+
+// if (!YII_WORK_SERVER) {
+//     $conf['modules']['comments'] = [
+//             'class' => 'modules\comments\Module',
+//             'accessPlan' => modules\comments\Module::ACCESSPLAN_ALL,
+//         ];
+
+//     $conf['bootstrap'][] = 'modules\comments\Bootstrap';
+// }
 
 //var_dump($conf);die;
 

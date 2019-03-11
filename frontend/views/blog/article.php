@@ -1,32 +1,22 @@
 <?php
 
 /**
- * @package myblog
  * @file article.php created 06.02.2018 17:42:22
- * 
+ *
  * @copyright Copyright (C) 2018 Sergio Codev <codev>
  * @license This program is free software: GNU General Public License
  */
 
 /* @var $this yii\web\View */
 use yii\helpers\Html;
-use yii\helpers\HtmlPurifier;
 use yii\helpers\Url;
-use yii\helpers\BaseStringHelper;
-use yii\widgets\LinkPager;//для пагинации
-use yii\widgets\Breadcrumbs;
-use common\widgets\Alert;
+//для пагинации
 use common\components\helpers\CustomStringHelper;
 use common\widgets\listLinks\ListLinksWidget;
-use coderius\yii2_highlight_js\HighlightWidget;
-use common\widgets\likeBtn\likeBtnWidget;
-use common\enum\SiteSubjectsEnum;
 use common\widgets\materialList\MaterialListWidget;
-use yii\data\ActiveDataProvider;
 use frontend\models\blog\articles\BlogArticles;
 
 frontend\assets\PrismAsset::register($this);
-
 
 //if(\Yii::$app->user->can(\common\components\rbac\Rbac::PERMISSION_ADMIN_PANEL)){
 //echo "PHP: " . PHP_VERSION . '<br>';
@@ -35,9 +25,6 @@ frontend\assets\PrismAsset::register($this);
 //phpinfo();
 //    //var_dump(\Yii::$app->formatter->asDateTime($article->createdAt, 'php:d F (D.) Yг. в Hч.iм.'));
 //}
-
-
-
 
 ?>
 
@@ -54,28 +41,28 @@ frontend\assets\PrismAsset::register($this);
                 <?php echo Html::img(
                         CustomStringHelper::buildSrc(
                                 Yii::$app->params['srcImgArticleBig'],
-                                [   'id_article' => $article->id,
-                                    'src' => $article->faceImg
+                                ['id_article' => $article->id,
+                                    'src' => $article->faceImg,
                                 ]
                         ),
-                        
-                        [   'alt'=> $article->faceImgAlt,
-                            'title'=> $article->title,
-                            'class'=>'single_post__header-main_img'
+
+                        ['alt' => $article->faceImgAlt,
+                            'title' => $article->title,
+                            'class' => 'single_post__header-main_img',
                         ]);
                 ?>
                 <div class="single_post__header-text">
                     <ul class="single_post__header-text-data">
                         
                     <!--comments-->
-                    <?php if ($article->hasComments()): ?>
-                        <li>
+                    <?php //if ($article->hasComments()):?>
+                        <!-- <li>
                             <a class="comment-trigger" href="">
                                 <i class="fa fa-comment" aria-hidden="true"></i>
-                                <span><?= $countComments; ?></span>
+                                <span><?php //echo $countComments;?></span>
                             </a>
-                        </li>
-                    <?php endif; ?>    
+                        </li> -->
+                    <?php //endif;?>    
                         
                         <li>
                             <i class="fa fa-eye" aria-hidden="true"></i>
@@ -92,9 +79,9 @@ frontend\assets\PrismAsset::register($this);
                         </ul>
                     <?php endif; ?>
 
-                    <h1 class="h_style_1 media-size text-stroke"><?= strip_tags(trim($article->title));?></h1>
+                    <h1 class="h_style_1 media-size text-stroke"><?= strip_tags(trim($article->title)); ?></h1>
                     <p class="h5 color-wite">
-                        <?php if($article->hasAuthor()): ?>
+                        <?php if ($article->hasAuthor()): ?>
                         Автор: <a class="link-pic" href=""><strong><?php echo $article->author->username; ?></strong></a>
                         <?php endif; ?>
                         <span> | <?= CustomStringHelper::localeDataFormat($article->createdAt); ?></span>
@@ -103,12 +90,12 @@ frontend\assets\PrismAsset::register($this);
             </div>
         </div>
         
-            <?php //echo $this->render('_facebook-likeButton'); ?>
+            <?php //echo $this->render('_facebook-likeButton');?>
             
         <!--text of article-->
         <div class="col-xxs-12 col-xs-12 single_post__content">
 
-            <?php echo $article->text;?>
+            <?php echo $article->text; ?>
 
         </div>
         
@@ -155,7 +142,7 @@ frontend\assets\PrismAsset::register($this);
                         
                     </li>
                     <li>
-                        <a class="icon-skype rotatemin10deg hoverBorderLimon skype-button" data-myaction="myShare" data-contact-id="live:coderius_1" rel="nofollow" href=""></a>
+                        <!-- <a class="icon-skype rotatemin10deg hoverBorderLimon skype-button" data-myaction="myShare" data-contact-id="live:coderius_1" rel="nofollow" href=""></a> -->
                         <!--<span class="icon-skype skype-button" data-contact-id="live:coderius_1"></span>-->
                         <!--<a class="icon-skype rotatemin10deg hoverBorderLimon" data-myaction="myShare" rel="nofollow" href=""></a>-->
                     </li>
@@ -168,7 +155,7 @@ frontend\assets\PrismAsset::register($this);
 
 
 
-   <?php if($article->hasSery()): ?>
+   <?php if ($article->hasSery()): ?>
 
         <?= ListLinksWidget::widget([
             'list' => \Yii::$app->sidebar->getRelativeArticlesBySeryToWidget($article->sery->id),
@@ -184,53 +171,50 @@ frontend\assets\PrismAsset::register($this);
                     ->category($article->idCategory)
                     ->orderRandom()
                     ->limit(6),
-    
+
 //    'layout' => "{header}\n{items}",
-    
+
     'headerText' => 'Также по теме:',
 //    'itemOptions' => function($model, $index){
 //        return [
 //            'data-link' => Url::toRoute(['/blog/article', 'alias' => $model->alias])
 //        ];
 //    },
-    
+
     'itemViewParams' => [
-        'image' => function($model){
+        'image' => function ($model) {
             return Html::img("@img-web-blog-posts/{$model->id}/middle/{$model->faceImg}", ['alt' => '', 'title' => '', 'class' => 'linkbox-elem-img']);
-        }, 
-        'category' => function($model){
+        },
+        'category' => function ($model) {
             return $model->hasCategory() ? $model->category->title : 'Без категории.';
-        }, 
-        'title' => function($model){
+        },
+        'title' => function ($model) {
             return $model->title;
-        }, 
-        'date' => function($model){
+        },
+        'date' => function ($model) {
             return \Yii::$app->formatter->asDateTime($model->createdAt, $pattern = 'php:d. M Y');
         },
-        'linkPage' => function($model){
+        'linkPage' => function ($model) {
             return Url::toRoute(['/blog/article', 'alias' => $model->alias]);
         },
-        'linkCategory' => function($model){
+        'linkCategory' => function ($model) {
             return $model->hasCategory() ? Url::toRoute(['/blog/category', 'alias' => $model->category->alias]) : '#';
-        },         
+        },
     ],
-    'on beforeRenderItem' => function ($event) use ($article){
-        if($event->model->id === $article->id){//чтобы не отобр. текущая запись
+    'on beforeRenderItem' => function ($event) use ($article) {
+        if ($event->model->id === $article->id) {//чтобы не отобр. текущая запись
             $event->isValid = false;
         }
-        
-        
-    },            
+    },
     'on afterRenderItem' => function ($event) {
         $index = $event->indexElement + 1;
-        
-        if($index % 3 == 0){
+
+        if ($index % 3 == 0) {
             $event->result = '<div class="clearfix visible-lg visible-md"></div>';
-        }else if($index % 2 == 0){
+        } elseif ($index % 2 == 0) {
             $event->result = '<div class="clearfix visible-sm"></div>';
         }
-    },           
-    
+    },
 ]); ?>
 
 
@@ -378,19 +362,19 @@ $js = <<<JS
 //==================================   
         
         
-$('.icon-skype[data-myaction="myShare"]').on('click', function(e) {
-    e.preventDefault();
-    //$('[allow]').show();
-});        
+// $('.icon-skype[data-myaction="myShare"]').on('click', function(e) {
+//     e.preventDefault();
+//     $('[allow]').show();
+// });        
           
 JS;
 
-$this->registerCss(".lwc-chat-button{opacity: 0;}");//прячем иконку скайпа
+$this->registerCss('.lwc-chat-button{opacity: 0;}'); //прячем иконку скайпа
 
 $this->registerJs($js, \yii\web\View::POS_READY);
-$this->registerJsFile("https://swc.cdn.skype.com/sdk/v1/sdk.min.js");
-//$this->registerJsFile("http://www.skypeassets.com/i/scom/js/skype-uri.js");
-$this->registerJsFile('https://apis.google.com/js/platform.js', ['async'=> true, 'defer'=> true]);
+// $this->registerJsFile('https://swc.cdn.skype.com/sdk/v1/sdk.min.js');
+// $this->registerJsFile('http://www.skypeassets.com/i/scom/js/skype-uri.js');
+$this->registerJsFile('https://apis.google.com/js/platform.js', ['async' => true, 'defer' => true]);
 
 //$this->registerCss('[allow]{display:none}[allow].lwc-chat-frame{display:visible !important;}');
 
