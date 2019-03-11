@@ -153,7 +153,7 @@ frontend\assets\PrismAsset::register($this);
         
     </div>   
 
-
+    
 
    <?php if ($article->hasSery()): ?>
 
@@ -217,6 +217,14 @@ frontend\assets\PrismAsset::register($this);
     },
 ]); ?>
 
+
+    <?php echo \coderius\comments\widgets\commentsBlock\CommentWidget::widget([
+            // 'assetDepends' => ['frontend\assets\AppAsset'],
+            // 'materialAuthorId' => $article->hasAuthor() ? $article->author->id : false,
+            'entity' => \Yii::$app->params['entities']['blog'],
+            'entityId' => $article->id,
+        ]);
+    ?>
 
 </main>
 
