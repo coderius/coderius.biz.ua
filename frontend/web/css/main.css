@@ -1,0 +1,181 @@
+/* 
+    Created on : 06.01.2018, 19:29:42
+    Author     : coder
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed');
+
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+*/
+.bg-darkRed{
+    background-color: #b5563b;
+}
+
+.header_line{
+    background-color: #d65a37;
+}
+
+.logo{
+    overflow: hidden;
+    line-height: 54px;
+    
+}
+
+.logo a{
+    display: table;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo a:hover{
+    text-decoration: none;
+}
+
+.logo > span{
+    display: inline-block;
+    float: left;
+}
+
+.logo a > span.fa{
+    
+    font-size: 0px;
+    transition: font-size 0.4s linear;
+}
+
+.logo a:hover > span.fa{
+    font-size: 24px;
+}
+
+
+.topNav ul{
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+li.serviceLinks-top{
+    
+}
+
+.topNav > ul > li{
+    float: left;
+    list-style: none;
+    
+}
+
+.topNav a{
+    display: inline-block;
+    color: #ffc8b2;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    padding: 15px 10px;
+    background-color: transparent;
+    transition: background-color 0.4s linear, color 0.4s linear;
+    margin-top: 3px;
+}
+
+.topNav a:hover{
+    text-decoration: none;
+    background-color: #b5563b;
+    color: #fff;
+}
+.topNav a.activeItem{
+    position: relative;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+.topNav a.activeItem:before{
+    content: " ";
+    background-color: #fff;
+    height: 6px;
+    width: 6px;
+    border-radius: 3px;
+    position: absolute;
+    left: 1px;
+    top: 50%;
+    margin-top: -5px;
+}
+
+.topNav .serviceLinks-top a:hover{
+    background-color:transparent !important;
+}
+.topNav .serviceLinks-top a{
+    padding: 10px;
+    background-color: transparent;
+    position: relative;
+}
+
+.serviceLinks-top a span{
+    background-color: #b5563b;
+    padding: 5px;
+    border-radius: 50%;
+    /*font-weight: bold;*/
+    transition: background-color 0.4s linear, color 0.5s  ease;
+}
+.serviceLinks-top a:hover span{
+    background-color: transparent;
+    
+    color: yellow;
+}
+.search_form{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.search_form form{
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+.search_form input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    /*border-radius: 4px;*/
+    font-size: 14px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 2px 40px 2px 10px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    float: right;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.search_form input[type=text]::-webkit-input-placeholder {color:#CBCBCB;font-style: italic;}
+.search_form input[type=text]::-moz-placeholder          {color:#CBCBCB;font-style: italic;}/* Firefox 19+ */
+.search_form input[type=text]:-moz-placeholder           {color:#CBCBCB;font-style: italic;}/* Firefox 18- */
+.search_form input[type=text]:-ms-input-placeholder      {color:#CBCBCB;font-style: italic;}
+
+
+
+.search_form input[type=text]:focus {
+    width: 100%;
+}
+
+.search_form button {
+    background-color: #b2b2b2;
+    font-size: 16px;
+    color:#fff;
+    font-weight: bold;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    height: 28px;
+    width: 30px;
+    border: none;
+    outline:none;
+    -webkit-transition: color 0.4s ease-in-out;
+    transition: color, background-color 0.4s ease-in-out;
+    /*border-radius: 0 4px 4px 0 ;*/
+}
+
+.search_form button:hover {
+    color: red;
+    background-color: #d8d8d8;
+}

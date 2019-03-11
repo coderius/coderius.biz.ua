@@ -1,0 +1,85 @@
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+    /*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media only screen and (min-width: 576px) {
+
+    }
+    
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
+
+    /*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media only screen and (max-width: 576px) {
+        
+    }
+    
+    /* Extra Small Devices, Phones */ 
+    /*screen-xxs-min*/
+    @media only screen and (max-width : 480px) {
+        
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+
+    }
+
+/*
+Media queries breakpoints Bootstrap 3
+screen-xxs-min: 320px
+screen-xs-min: 480px
+screen-sm-min: 768px
+screen-md-min: 992px
+screen-lg-min: 1200px
+*/
+
+// So media queries don't overlap when required, provide a maximum
+/*$screen-xxs-max:             ($screen-xs-min - 1);
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;*/
+

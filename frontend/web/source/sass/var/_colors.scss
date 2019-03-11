@@ -1,0 +1,53 @@
+//Colors
+//В шапке 
+$BrownRust: #b5563b;
+$FlamePea: #d65a37;
+
+$color_chevronMenu: lighten($FlamePea,40%);
+
+
+//Серый
+$mineShaft: #333;
+$silver: #C9C9C9;
+$silver_d40: darken($silver, 40%);
+
+$outerSpace: #2A3035;
+$alto: #d2d2d2;
+$lightBg: #f7f7f7;
+
+//разновидности синего
+$chathamsBlue :#123D71;
+$endeavour:#0656A5;
+
+$bostonBlue: #428BCA;
+$viking: #5BC0DE;
+$linkWater: #D9EDF7;
+
+//Желтый
+$ripeLemon: #E1F31F;
+$orange: #E7BF5E;
+
+
+//красный и розовый
+$hollywoodCerise: #FF00B2;
+$appleBlossom:#a94442;
+$pomegranate: #F64B2F;
+
+//коричневый
+$brownPod: #300E00;
+
+/*Size*/
+$headerHeight: 150px;
+$footerMinHeight:140px;
+
+//Зеленый
+$japaneseLaurel:#008A0C;
+$mountainMeadow: #1E9E74;
+$salat: rgb(202, 208, 106);
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+.color-japaneseLaurel{
+    color: $japaneseLaurel;
+}

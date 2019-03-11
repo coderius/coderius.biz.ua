@@ -1,0 +1,25 @@
+/* 
+    Created on : 22.01.2018, 15:21:09
+    Author     : coder
+*/
+@import "bootstrap/grid";
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+/*.container {
+  @include container-fixed;
+
+  @media (min-width: $screen-xxs-min) {
+    width: $container-sm;
+  }
+  
+}*/
+
+@include make-grid(xxs);
+
+@media (min-width: $screen-xs-min) {
+    @include make-grid(xs);
+}
+

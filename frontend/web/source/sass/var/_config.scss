@@ -1,0 +1,27 @@
+$color_border_light: lighten($silver,10%);
+$color_text_light: darken($silver,30%);
+$color_link--hover: lighten($FlamePea, 10%);
+$color_headerline_light: $FlamePea;
+$color_headerline_dark: $BrownRust;
+$color_font_base: $outerSpace;
+
+
+$font_size_base: 16px;//1rem
+
+$font_size_extrasmall: 12px;
+$font_size_small: 14px;
+
+//отступы
+$padding_base: 15px;
+
+.row-padding{
+    padding: $padding_base;
+}
+
+.row-side-padding{
+    padding: 0 $padding_base;
+}
+
+.row-side-margin{
+    margin: 0 $padding_base;
+}

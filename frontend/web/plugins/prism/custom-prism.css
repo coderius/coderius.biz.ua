@@ -1,0 +1,53 @@
+/**
+ * @package myblog
+ * @file custom-prism.css created 30.04.2018 14:51:37
+ * 
+ * @copyright Copyright (C) 2018 Sergio coderius <coderius>
+ * @license This program is free software: GNU General Public License
+ */
+/* 
+    Created on : 30.04.2018, 14:51:37
+    Author     : Sergio coderius <coderius>
+*/
+pre[class*="language-"]{
+    margin: 20px 0;
+}
+
+pre[class*="language-"]>code {
+	box-shadow: none !important;
+	border-left: 10px solid #8dbfe3 !important;
+        font-size: 110% !important;
+        font-family: Consolas, 'Ubuntu Mono', 'Courier New' !important;
+        
+}
+pre[class*="language-"]:before,
+pre[class*="language-"]:after {
+	box-shadow: none !important;
+        
+}
+
+/* 
+Переоприделены, чтобы сделать шрифт и высоту линии меньше
+*/
+pre[class*="language-"]>code {
+    background-size: 3em 2.8em;
+}
+code[class*="language-"], pre[class*="language-"] {
+    line-height: 1.4;
+}
+
+.token.class-name {
+    color: #008100;
+    font-weight: bold;
+}    
+
+.token.keyword {
+    color: #a600ac;
+} 
+.token.variable {
+    color: #0502a7;
+} 
+.token.function {
+    color: #9e8e01;
+    /* font-weight: bold; */
+} 

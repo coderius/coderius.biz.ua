@@ -1,0 +1,13 @@
+#loader {
+    display:none;
+    position:fixed; 
+    top:0; left:0;
+    height:100%; width:100%;
+    background:#ccc; opacity:.9;
+    z-index: 10000;
+}
+#loader img {
+    display:block; position:absolute; right:4px; top:4px;
+    cursor:default;
+     
+}

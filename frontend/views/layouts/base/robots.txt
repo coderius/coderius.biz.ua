@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /signup
+Disallow: /login
+Disallow: /request-password-reset
+Disallow: /search
+
+Host: coderius.biz.ua
+Sitemap: https://coderius.biz.ua/sitemap.xml

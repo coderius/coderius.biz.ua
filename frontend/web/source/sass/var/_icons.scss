@@ -1,0 +1,79 @@
+$path-to-icon-sprite: "../../img-styles/sprite-icons48X48/";
+
+.icon-addthis {
+  background-image: url(#{$path-to-icon-sprite}sprite-icons48X48.png);
+  background-position: -48px 0px;
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+.icon-email {
+  background-image: url(#{$path-to-icon-sprite}sprite-icons48X48.png);
+  background-position: -96px -48px;
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+.icon-facebook {
+  background-image: url(#{$path-to-icon-sprite}sprite-icons48X48.png);
+  background-position: 0px -48px;
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+.icon-google_plus {
+  background-image: url(#{$path-to-icon-sprite}sprite-icons48X48.png);
+  background-position: -48px -48px;
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+.icon-linkedin {
+  background-image: url(#{$path-to-icon-sprite}sprite-icons48X48.png);
+  background-position: -96px 0px;
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+.icon-rss {
+  background-image: url(#{$path-to-icon-sprite}sprite-icons48X48.png);
+  background-position: 0px 0px;
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+.icon-sharethis {
+  background-image: url(#{$path-to-icon-sprite}sprite-icons48X48.png);
+  background-position: 0px -96px;
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+.icon-skype {
+  background-image: url(#{$path-to-icon-sprite}sprite-icons48X48.png);
+  background-position: -48px -96px;
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+.icon-twitter {
+  background-image: url(#{$path-to-icon-sprite}sprite-icons48X48.png);
+  background-position: -96px -96px;
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+.icon-vkontakte {
+  background-image: url(#{$path-to-icon-sprite}sprite-icons48X48.png);
+  background-position: -144px 0px;
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+.icon-youtube {
+  background-image: url(#{$path-to-icon-sprite}sprite-icons48X48.png);
+  background-position: -144px -48px;
+  width: 48px;
+  height: 48px;
+  display: block;
+}

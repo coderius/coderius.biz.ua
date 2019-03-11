@@ -1,0 +1,94 @@
+//подключение иконок  элемент:before {@include iconFontAwesome("pencil");}
+//$animated: true или false
+//$rotate: 90 или 180 или 270
+//$flip: horizontal или vertical
+@mixin iconFontAwesome($icon,$animated: false, $rotate: false, $flip: false) {
+    @include fa-icon;
+    @extend .fa;
+    @extend .fa-#{$icon}:before;
+    //подключение класса для анимированных картинок
+    @if $animated == true {
+        @extend .fa-spin;
+    }
+    //подключение класса для поворота
+    @if $rotate !=  false{
+        @extend .fa-rotate-#{$rotate};
+    } 
+    //подключение класса отражения по горизонтали и вертикали
+    @if $flip !=  false{
+        @extend .fa-flip-#{$flip};
+    } 
+    
+}
+
+//Usage @include transition(color .3s ease);
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+/* 
+CSS3 calc() function to perform calculations 
+@include calc(height, "100% - 50px");
+*/
+@mixin calc($property, $expression) { 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: calc(#{$expression}); 
+} 
+
+
+//Подключение длинной тени текста
+//@include longShadow(darken($stuntcoders-blue, 10%), 120);
+@mixin longShadow($color, $length:200) {
+    text-shadow: setLongShadow($color, $length);
+}
+@function setLongShadow($color, $length) {
+    $value: 0 0 $color;
+ 
+    @for $i from 1 through $length {
+        $value: #{$value}, #{$i}px #{$i}px #{$color};
+    }
+ 
+    @return $value;
+}
+/////////////////////////////////////////////////////////
+
+
+
+//Работа с медиа запросами
+/*$breakpoints: (
+    'little'  : ( max-width:  766px ),
+    'small'  : ( min-width:  767px ),
+    'medium' : ( min-width:  992px ),
+    'large'  : ( min-width: 1200px )
+);*/
+
+//под бутстрап
+$screen: "only screen";
+
+$breakpoints: (
+    'xs'    : "(max-width: $screen-xs-max)",
+    'sm'    : "(min-width: $screen-sm-min) and (max-width: $screen-sm-max)" ,
+    'md'    : "(min-width: $screen-md-min) and (max-width: $screen-md-max)" ,
+    'lg'    : "(min-width: $screen-lg-min)"
+);
+
+@mixin respond-to($name) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+        @media #{(map-get($breakpoints, $name))} {
+            @content;
+        }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}

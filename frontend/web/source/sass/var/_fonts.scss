@@ -1,0 +1,14 @@
+$pathFontsDir:'../../fonts/';
+$pathFontAwesome: '#{$pathFontsDir}font-awesome-4.7.0/fonts';//подключаем файл со шрифтом
+$fa-font-path: $pathFontAwesome !default;//путь к файлу, который будет прописан в стилях
+@import 'font-awesome';//импортируем файл font-awesome.scss 
+
+$pathFontBootstrap:'#{$pathFontsDir}bootstrap/';
+
+
+/*@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed');*/
+
+/*@import url('https://fonts.googleapis.com/css?family=Cormorant+Infant|Roboto+Condensed');*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto+Condensed');
+/*font-family: 'Cormorant Infant', serif;
+font-family: 'Roboto Condensed', sans-serif;*/

@@ -1,0 +1,16 @@
+/* 
+    Created on : 22.01.2018, 16:51:30
+    Author     : coder
+*/
+@import "bootstrap/variables";
+
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xxs:                  320px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xxs-min:              $screen-xxs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-x-phone:               $screen-xxs-min !default;
+
+$screen-xxs-max:              ($screen-xs-min - 1) !default;
