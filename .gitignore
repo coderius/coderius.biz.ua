@@ -35,4 +35,6 @@ phpunit.phar
 /.vagrant
 
 # site images
-/frontend/web/images
+/frontend/web/images/*
+!/frontend/web/images
+
