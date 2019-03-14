@@ -21,6 +21,17 @@ return [
             'class' => 'yii\console\controllers\FixtureController',
             'namespace' => 'common\fixtures',
           ],
+
+        //Create migration in module extention -
+        //yii migrate/create --migrationPath=coderius/comments/migrations create_comments_table
+        // 'migrate' => [
+        //     'class' => 'yii\console\controllers\MigrateController',
+        //     'migrationNamespaces' => [
+        //         'console\migrations',
+        //         'coderius\comments\migrations',
+        //     ],
+        //     'migrationPath' => null, // allows to disable not namespaced migration completely
+        // ],
     ],
     'components' => [
         'log' => [
