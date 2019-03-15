@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "490d5b35df46c00cab2bdbbfbf15d667",
+    "content-hash": "a26b67d540aea9e1a4c9c163caafe32c",
     "packages": [
         {
             "name": "2amigos/yii2-tinymce-widget",
@@ -497,12 +497,13 @@
             "dist": {
                 "type": "path",
                 "url": "C:/Users/coder/Desktop/www/yii2-ext/yii2-live-comments",
-                "reference": "3f40a72a08a8701922b79a8aac5731f1294776c2",
+                "reference": "e9d859aa4c3fdf71a3a863f88eda84ebcaf73336",
                 "shasum": null
             },
             "require": {
+                "npm-asset/vue": "~2.6.0",
                 "php": ">=5.6.0",
-                "yiisoft/yii2": "~2.0.0"
+                "yiisoft/yii2": "~2.0.14"
             },
             "require-dev": {
                 "phpunit/phpunit": "*"
@@ -688,16 +689,16 @@
         },
         {
             "name": "kartik-v/yii2-krajee-base",
-            "version": "v2.0.4",
+            "version": "v2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-krajee-base.git",
-                "reference": "ec7fc2c5ed76ee29c939ed6fe33bab76eb25499c"
+                "reference": "9ddb662bdf49fdb671a90853912a40418a26a0dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/ec7fc2c5ed76ee29c939ed6fe33bab76eb25499c",
-                "reference": "ec7fc2c5ed76ee29c939ed6fe33bab76eb25499c",
+                "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/9ddb662bdf49fdb671a90853912a40418a26a0dd",
+                "reference": "9ddb662bdf49fdb671a90853912a40418a26a0dd",
                 "shasum": ""
             },
             "suggest": {
@@ -736,7 +737,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2018-12-04T03:40:27+00:00"
+            "time": "2019-03-13T17:14:54+00:00"
         },
         {
             "name": "kartik-v/yii2-widget-fileinput",
@@ -917,6 +918,20 @@
                 "maxmind"
             ],
             "time": "2019-01-04T19:55:56+00:00"
+        },
+        {
+            "name": "npm-asset/vue",
+            "version": "2.6.8",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/vue/-/vue-2.6.8.tgz",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ]
         },
         {
             "name": "swiftmailer/swiftmailer",
