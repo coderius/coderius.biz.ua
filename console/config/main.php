@@ -23,7 +23,7 @@ return [
           ],
 
         //Create migration in module extention -
-        //yii migrate/create --migrationPath=coderius/comments/migrations create_comments_table
+        //yii migrate/ --migrationPath=coderius/comments/migrations create_comments_table
         // 'migrate' => [
         //     'class' => 'yii\console\controllers\MigrateController',
         //     'migrationNamespaces' => [
@@ -32,6 +32,14 @@ return [
         //     ],
         //     'migrationPath' => null, // allows to disable not namespaced migration completely
         // ],
+
+        'migrate-mymodule' => [
+            'class' => 'yii\console\controllers\MigrateController',
+            'migrationNamespaces' => [
+                'coderius\comments\migrations',
+            ],
+            'migrationPath' => '@coderius/comments/migrations', // allows to disable not namespaced migration completely
+        ],
     ],
     'components' => [
         'log' => [
