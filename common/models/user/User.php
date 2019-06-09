@@ -15,7 +15,8 @@ use common\components\rbac\Rbac;
  * @property string $username
  * @property string $avatar
  * @property string $group_user - enum('user', 'admin')
- * @property string $typeLastLogin
+ * @property int $signup_type
+ * @property int $auth_type
  * @property string $password_hash
  * @property string $password_reset_token
  * @property string $email
@@ -70,6 +71,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
+            [['signup_type', 'auth_type', 'status'], 'integer'],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
         ];
     }

@@ -17,6 +17,7 @@ use frontend\models\blog\tags\BlogTags;
 use frontend\models\blog\series\BlogSeries;
 use yii\data\ActiveDataProvider;
 use yii\helpers\Url;
+use frontend\services\auth\SocialAuthService;
 
 /**
  * Site controller
@@ -35,14 +36,30 @@ class SiteController extends BaseController
 //                    $timestamp = strtotime($q->from('blogArticles')->max('updatedAt'));
 //                    return $timestamp;
 //                },
-////                'etagSeed' => function ($action, $params) {
-////                    return serialize('12345');
-////                }        
+//                'etagSeed' => function ($action, $params) {
+//                    return serialize('12345');
+//               }        
 //            ],
 //                     
 //        ];
 //    }
     
+
+    public function actions()
+    {
+        return [
+            'auth' => [
+                'class' => 'yii\authclient\AuthAction',
+                'successCallback' => [$this, 'onAuthSuccess'],
+            ],
+        ];
+    }
+
+    public function onAuthSuccess($loginClient){
+        $authService = new SocialAuthService($loginClient);
+        $authService->hendlerAuthSuccess();
+    }
+
     /**
      * Displays homepage.
      *

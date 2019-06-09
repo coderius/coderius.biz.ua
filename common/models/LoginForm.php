@@ -1,12 +1,11 @@
 <?php
 namespace common\models;
 
+use common\components\recaptcha\ReCaptcha;
+use common\models\user\User;
 use Yii;
 use yii\base\Model;
-use common\models\user\User;
 
-use common\components\recaptcha\ReCaptcha;
-use common\components\recaptcha\ReCaptchaResponse;
 /**
  * Login form
  */
@@ -17,9 +16,8 @@ class LoginForm extends Model
     public $rememberMe = true;
 
     public $recaptcha;
-    
-    private $_user;
 
+    private $_user;
 
     /**
      * @inheritdoc
@@ -28,28 +26,30 @@ class LoginForm extends Model
     {
         return [
             // username and password are both required
-            
+
             [['username', 'password', 'recaptcha'], 'required'],
             [['recaptcha'], 'recaptchaValidation'],
-            
+
             // rememberMe must be a boolean value
             ['rememberMe', 'boolean'],
             // password is validated by validatePassword()
             ['password', 'validatePassword'],
         ];
     }
-    
-    public function recaptchaValidation($attribute, $params) {
+
+    public function recaptchaValidation($attribute, $params)
+    {
 
         $this->$attribute = $this->recaptcha();
 //        var_dump($this->$attribute);die;
-        if(true !== $this->$attribute){
+        if (true !== $this->$attribute) {
             $this->addError($attribute, 'Вы не прошли проверку. Попробуйте еще раз.');
         }
-        
+
     }
-    
-    protected function recaptcha(){
+
+    protected function recaptcha()
+    {
         //секретный ключ
         $secret = "6Lf06GQUAAAAAG4r4bkkQMhowDNZLOv_BCtxemRM";
         //ответ
@@ -64,7 +64,7 @@ class LoginForm extends Model
                     $_SERVER["REMOTE_ADDR"],
                     $_POST["g-recaptcha-response"]
                 );
-                
+
             }
 
             if ($response != null && $response->success) {
@@ -74,10 +74,10 @@ class LoginForm extends Model
             }
 
         }
-        
+
         return false;
     }
-    
+
     /**
      * @inheritdoc
      */
@@ -117,7 +117,7 @@ class LoginForm extends Model
         if ($this->validate()) {
             return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
         }
-        
+
         return false;
     }
 

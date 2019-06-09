@@ -52,6 +52,17 @@ $conf = [
                         'app/admin' => 'admin.php',
                     ],
                 ],
+                'auth*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@common/translations',
+                    //'sourceLanguage' => 'en-US',
+                    'forceTranslation' => true,
+                    'fileMap' => [
+                        'auth' => 'auth.php',
+                        'auth/error' => 'error.php',
+                        'auth/admin' => 'admin.php',
+                    ],
+                ],
             ],
         ],
 
@@ -117,7 +128,7 @@ $conf = [
             'class' => 'coderius\comments\Module',
         ];
 
-    // $conf['bootstrap'][] = 'modules\comments\Bootstrap';
+    $conf['bootstrap'][] = 'coderius\comments\config\Bootstrap';
 
 // if (!YII_WORK_SERVER) {
 //     $conf['modules']['comments'] = [

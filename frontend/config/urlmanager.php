@@ -18,7 +18,7 @@ return [
 //                'logout' => 'site/logout',
 //                'signup' => 'site/signup',
                 
-                '<action:(login|logout|signup)>' => 'site/<action>',
+                '<action:(login|logout|signup|auth)>' => 'site/<action>',
                 
                 'search/<pageNum:\d+>' => 'search/index',
                 'search' => 'search/index',
