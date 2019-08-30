@@ -16,6 +16,7 @@ use common\widgets\listLinks\ListLinksWidget;
 use common\widgets\materialList\MaterialListWidget;
 use frontend\models\blog\articles\BlogArticles;
 
+
 frontend\assets\PrismAsset::register($this);
 
 //if(\Yii::$app->user->can(\common\components\rbac\Rbac::PERMISSION_ADMIN_PANEL)){

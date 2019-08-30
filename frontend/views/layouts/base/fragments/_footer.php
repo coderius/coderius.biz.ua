@@ -31,3 +31,6 @@
            
         </div>
     </footer>
+    
+    <?= \coderius\hitCounter\widgets\hitCounter\HitCounterWidget::widget([]); ?>
+

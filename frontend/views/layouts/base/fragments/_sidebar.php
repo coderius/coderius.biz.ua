@@ -10,6 +10,7 @@
 use common\widgets\sidebar\categories\CategoriesSideBarWidget;
 use common\widgets\sidebar\tags\TagsSideBarWidget;
 use common\widgets\sidebar\bestMaterials\BestMaterialsSideBarWidget;
+use coderius\dynamicDontentMenu\Menu;
 //\Yii::$app->sidebar->show();
 ?>
 
@@ -19,6 +20,17 @@ use common\widgets\sidebar\bestMaterials\BestMaterialsSideBarWidget;
 --------------------------------------------------------------------------------
 -->
 <aside class="col-md-3 col-sm-4 col-xs-12 col-xxs-12">
+
+    <?= Menu::widget(
+            [
+                'clientOptions' => [
+                    'selectors' => "h1, h2, h3, .h_style_3",
+                    'extendPage'=> false // do not increase page height
+                ]
+            ]
+        );
+    ?>
+    
     <div id="sideicons" class="sideblock">
         <div class="sideicons-wrap">
             <a class="socIcon rssIcon" rel="alternate nofollow" type="application/rss+xml" href="http://feeds.feedburner.com/coderiusIT" title="Подпишись на новые записи блога по RSS" target="_blank"></a>
@@ -48,5 +60,6 @@ use common\widgets\sidebar\bestMaterials\BestMaterialsSideBarWidget;
         ]); ?>
     <?php endif; ?>
 
+    
     
 </aside>
