@@ -31,7 +31,7 @@ use common\components\rbac\Rbac;
     <?php endif; ?>
         
         <div class="col-lg-2 col-md-3 col-sm-5 col-xs-5 col-xxs-12 logo bg-darkRed">
-            <a href="/">
+            <a href="<?= Url::home(true); ?>">
                 <span id="logo_word_1">CODER</span><!--  
                 --><span class="fa fa-magic"></span><!--
                 --><span id="logo_word_2">IUS</span>

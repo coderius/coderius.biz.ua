@@ -124,15 +124,15 @@ $conf = [
     ],
 ];
 
-    $conf['modules']['comments'] = [
-            'class' => 'coderius\comments\Module',
-        ];
-    $conf['bootstrap'][] = 'coderius\comments\config\Bootstrap';
+    // $conf['modules']['comments'] = [
+    //         'class' => 'coderius\comments\Module',
+    //     ];
+    // $conf['bootstrap'][] = 'coderius\comments\config\Bootstrap';
 
-    $conf['modules']['hitCounter'] = [
-        'class' => 'coderius\hitCounter\Module',
-    ];
-    $conf['bootstrap'][] = 'coderius\hitCounter\config\Bootstrap';
+    // $conf['modules']['hitCounter'] = [
+    //     'class' => 'coderius\hitCounter\Module',
+    // ];
+    // $conf['bootstrap'][] = 'coderius\hitCounter\config\Bootstrap';
 
 // if (!YII_WORK_SERVER) {
 //     $conf['modules']['comments'] = [

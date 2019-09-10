@@ -32,5 +32,5 @@
         </div>
     </footer>
     
-    <?= \coderius\hitCounter\widgets\hitCounter\HitCounterWidget::widget([]); ?>
+    <?php //echo \coderius\hitCounter\widgets\hitCounter\HitCounterWidget::widget([]); ?>
 

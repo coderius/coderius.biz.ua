@@ -5,9 +5,9 @@ $conf = [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=coderius',
+            'dsn' => 'mysql:host=172.27.0.3;port=3306;dbname=coderius',
             'username' => 'root',
-            'password' => '',
+            'password' => 'root',
             'charset' => 'utf8',
             'on afterOpen' => function ($event) {
 //                $expression1 = new \yii\db\Expression('

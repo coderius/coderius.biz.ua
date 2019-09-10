@@ -26,13 +26,11 @@
         "lysenkobv/yii2-geoip": "~1.0",
         "coderius/yii2-jqcloud2-widget": "@dev",
         "coderius/yii2-lightbox2-widget": "@dev",
-        "coderius/yii2-live-comments": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
         "yiisoft/yii2-httpclient": "^2.0",
         "yiisoft/yii2-authclient": "*",
-        "coderius/yii2-social-login": "^1.0",
-        "coderius/yii2-jquery-dynamic-content-menu": "^1.0",
-        "coderius/yii2-hit-counter": "^1.0"
+        "coderius/yii2-jquery-dynamic-content-menu": "^1.0"
+        
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
