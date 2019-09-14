@@ -5,7 +5,7 @@ $conf = [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=172.27.0.3;port=3306;dbname=coderius',
+            'dsn' => 'mysql:host=172.27.0.2;port=3306;dbname=coderius',
             'username' => 'root',
             'password' => 'root',
             'charset' => 'utf8',

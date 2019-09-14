@@ -16,8 +16,9 @@
     RewriteRule ^backend(.*) /backend/web/$1 [L]
 
     # Statics redirect
-    RewriteCond %{REQUEST_URI} ^/phpm
-    RewriteRule ^phpm/(.*)$ phpm/$1 [L]
+    # RewriteCond %{REQUEST_URI} ^/phpm
+    # RewriteRule ^phpm/(.*)$ /xhprof/xhprof_html/$1 [L]
+    # RewriteRule ^$ /backend/web/$1 [L]
 
     # Frontend redirect
     RewriteCond %{REQUEST_URI} ^(.*)$
