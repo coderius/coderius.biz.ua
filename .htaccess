@@ -10,7 +10,7 @@
     Options +FollowSymlinks
     # Enable mod_rewrite
     RewriteEngine On
-
+    
     # Backend redirect
     RewriteCond %{REQUEST_URI} ^/backend
     RewriteRule ^backend(.*) /backend/web/$1 [L]
@@ -24,9 +24,12 @@
     RewriteCond %{REQUEST_URI} ^(.*)$
     RewriteRule ^(.*)$ frontend/web/$1
 
+
     #no end slesh
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} ^(.+)/$
     RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+    
 
 </IfModule>

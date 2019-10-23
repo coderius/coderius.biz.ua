@@ -157,10 +157,15 @@ frontend\assets\PrismAsset::register($this);
     
 
    <?php if ($article->hasSery()): ?>
-
-        <?= ListLinksWidget::widget([
-            'list' => \Yii::$app->sidebar->getRelativeArticlesBySeryToWidget($article->sery->id),
-        ]); ?>
+        <?php $artList = \Yii::$app->sidebar->getRelativeArticlesBySeryToWidget($article->sery->id); ?>              
+        <?= 
+            count($artList) > 0 ? 
+            ListLinksWidget::widget([
+                'list' => \Yii::$app->sidebar->getRelativeArticlesBySeryToWidget($article->sery->id),
+            ])
+            :
+            '';
+    ?>
 
     <?php endif; ?>
 

@@ -29,8 +29,9 @@
         "guzzlehttp/guzzle": "^6.3",
         "yiisoft/yii2-httpclient": "^2.0",
         "yiisoft/yii2-authclient": "*",
-        "coderius/yii2-jquery-dynamic-content-menu": "^1.0",
-        "tinymce/tinymce": "~4.9"
+        "tinymce/tinymce": "~4.9",
+        "coderius/yii2-hit-counter": "^1.0",
+        "coderius/yii2-jquery-dynamic-content-menu": "^1.0"
         
     },
     "require-dev": {
@@ -67,7 +68,7 @@
 
         {
             "type": "path",
-            "url": "C:/Users/coder/Desktop/www/yii2-ext/yii2-hit-counter"
+            "url": "/var/www/html/yii2-hit-counter"
         }
         
         

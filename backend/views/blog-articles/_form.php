@@ -73,7 +73,12 @@ use common\widgets\IosStyleToggleSwitch\IosStyleToggleSwitchWidget;
 //        'toolbar'=> "codesample",
         
 //        'theme' => "advanced",
-        
+
+        //Set absolute url in image src
+        // 'relative_urls' => false,
+        // 'remove_script_host' => false,
+        // 'convert_urls' => true,
+
         //set br for enter
         'force_br_newlines' => true,
         'force_p_newlines' => false,
