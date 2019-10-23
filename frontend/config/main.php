@@ -13,54 +13,73 @@ return [
     'bootstrap' => [
         'log',
         'frontend\bootstrap\SetUp',
-        
-        ],
+
+    ],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'seo' => [
-           'class' => 'frontend\fragments\SeoComponent',
+            'class' => 'frontend\fragments\SeoComponent',
 //            'temp' => \frontend\components\view\SideBarComponent::BASE_TEMP,
-	],
+        ],
         //my component
         'sidebar' => [
-           'class' => 'frontend\fragments\SideBarComponent',
+            'class' => 'frontend\fragments\SideBarComponent',
 //            'temp' => \frontend\components\view\SideBarComponent::BASE_TEMP,
-	],
+        ],
         'fragmentHeader' => [
-           'class' => 'frontend\fragments\HeaderComponent',
+            'class' => 'frontend\fragments\HeaderComponent',
 //            'temp' => \frontend\components\view\SideBarComponent::BASE_TEMP,
-	],
-        
+        ],
+
         'adminPanel' => [
-           'class' => 'frontend\fragments\AdminPanel',
+            'class' => 'frontend\fragments\AdminPanel',
 //            'temp' => \frontend\components\view\SideBarComponent::BASE_TEMP,
-	],
-        
+        ],
+
         'request' => [
             'csrfParam' => '_csrf-user',
             'baseUrl' => $baseUrl,
             'cookieValidationKey' => 'sdifdbfshbsnstyrfedwety,mnbvcdsfe',
         ],
-        
+
         'user' => [
             'class' => 'yii\web\User',
             'identityClass' => 'common\models\user\User',
             'enableAutoLogin' => true,
             'identityCookie' => [
-//                'name' => '_identity-frontend', 
+//                'name' => '_identity-frontend',
                 'name' => '_identity-user',
                 'httpOnly' => true],
         ],
-        
+
+        'authClientCollection' => [
+            'class' => 'yii\authclient\Collection',
+            'clients' => [
+                'facebook' => [
+                    'class' => 'yii\authclient\clients\Facebook',
+                    'clientId' => '323455828332407',
+                    'clientSecret' => '118e26107a1e956853140898bba920a4',
+                    'attributeNames' => [
+                            'id',
+                            'name',
+                            'email',
+                            'picture',
+                            // 'picture{url}',
+
+                        ]
+                ],
+                // etc.
+            ],
+        ],    
         'assetManager' => [
-            'appendTimestamp' => YII_DEBUG ? false : true,//кэширование ресурсов по версии
+            'appendTimestamp' => YII_DEBUG ? false : true, //кэширование ресурсов по версии
             'bundles' => [
 //                'yii\web\JqueryAsset' => [
-//                    'js' => []
-//                ],
-//                'yii\bootstrap\BootstrapPluginAsset' => [
-//                    'js' => []
-//                ],
+                //                    'js' => []
+                //                ],
+                //                'yii\bootstrap\BootstrapPluginAsset' => [
+                //                    'js' => []
+                //                ],
                 //отключаем родной бутстрап
                 'yii\bootstrap\BootstrapAsset' => [
                     'css' => [],
@@ -69,10 +88,10 @@ return [
         ],
         'session' => [
             // this is the name of the session cookie used for login on the frontend
-//            'name' => 'advanced-frontend',
+            //            'name' => 'advanced-frontend',
             'name' => 'advanced-site',
         ],
-        
+
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -85,8 +104,8 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        'urlManager' => require(__DIR__ . '/urlmanager.php'),
+        'urlManager' => require __DIR__ . '/urlmanager.php',
     ],
     'params' => $params,
-    
+
 ];

@@ -31,3 +31,9 @@
            
         </div>
     </footer>
+  
+    <?php 
+        $this->on(\yii\base\View::EVENT_END_PAGE, function ($event){
+            echo \coderius\hitCounter\widgets\hitCounter\HitCounterWidget::widget([]);
+        });
+    ?>

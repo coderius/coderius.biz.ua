@@ -25,7 +25,14 @@
         "2amigos/yii2-tinymce-widget": "~1.1",
         "lysenkobv/yii2-geoip": "~1.0",
         "coderius/yii2-jqcloud2-widget": "@dev",
-        "coderius/yii2-lightbox2-widget": "@dev"
+        "coderius/yii2-lightbox2-widget": "@dev",
+        "guzzlehttp/guzzle": "^6.3",
+        "yiisoft/yii2-httpclient": "^2.0",
+        "yiisoft/yii2-authclient": "*",
+        "tinymce/tinymce": "~4.9",
+        "coderius/yii2-hit-counter": "^1.0",
+        "coderius/yii2-jquery-dynamic-content-menu": "^1.0"
+        
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
@@ -35,6 +42,12 @@
         "codeception/verify": "~0.3.1"
     },
     "config": {
+        "fxp-asset": {
+            "installer-paths": {
+              "npm-asset-library": "vendor/npm",
+              "bower-asset-library": "vendor/bower"
+            }
+        },    
         "process-timeout": 1800
     },
     "repositories": [
@@ -45,14 +58,22 @@
         
         {
             "type": "path",
-            "url": "/opt/lampp/htdocs/yii2-extentions/yii2-highlight-js"
+            "url": "C:/Users/coder/Desktop/www/yii2-ext/yii2-live-comments"
+        },
+
+        {
+            "type": "path",
+            "url": "C:/Users/coder/Desktop/www/yii2-ext/yii2-social-login"
+        },
+
+        {
+            "type": "path",
+            "url": "/var/www/html/yii2-hit-counter"
         }
+        
         
     ],
     "extra": {
-        "asset-installer-paths": {
-            "npm-asset-library": "vendor/npm",
-            "bower-asset-library": "vendor/bower"
-        }
+        
     }
 }

@@ -91,16 +91,21 @@ class SideBarService {
 //        var_dump($materials);die;
     }
     
-    public function shapeArticlesBySeryToWidget($seryId){
-       return BlogArticles::find()
-                ->active()
-                ->joinWith([
-                        'series' => function ($query) use ($seryId) {
-                            $query->andWhere([BlogSeries::tableName().'.id' => $seryId]);
-                        },
-                    ])
-                    ->orderBy([BlogArticles::tableName().'.createdAt' => SORT_ASC])    
-                    ->all();
+    public function shapeArticlesBySeryToWidget($seryId, $onlyActive = true){
+        $a = BlogArticles::find();
+                
+        if($onlyActive){
+            $a = $a->active();
+        }
+        $a = $a->joinWith([
+            'series' => function ($query) use ($seryId) {
+                $query->andWhere([BlogSeries::tableName().'.id' => $seryId]);
+            },
+        ])
+        ->orderBy([BlogArticles::tableName().'.createdAt' => SORT_ASC])    
+        ->all();
+
+        return $a;
     }
     
 }

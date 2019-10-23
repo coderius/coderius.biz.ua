@@ -4,39 +4,34 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
-use common\widgets\Alert;
-use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
-<?php $this->beginPage() ?>
+<?php $this->beginPage(); ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
+<html lang="<?= Yii::$app->language; ?>">
 <head>
-<meta charset="<?= Yii::$app->charset ?>">
+<meta charset="<?= Yii::$app->charset; ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<?= Html::csrfMetaTags() ?>
+<?= Html::csrfMetaTags(); ?>
 
-<title><?= Html::encode($this->title ? $this->title ." | ".\Yii::$app->name : \Yii::$app->name) ?></title>
+<title><?= Html::encode($this->title ? $this->title.' | '.\Yii::$app->name : \Yii::$app->name); ?></title>
 
-<?php $this->head() ?>
+<?php $this->head(); ?>
 </head>
 <body>
-<?php $this->beginBody() ?>
+<?php $this->beginBody(); ?>
 <div class="container-fluid top-container">
     
 
     
     <?php echo $this->render('//layouts/base/fragments/_header', [
         'nav' => \Yii::$app->fragmentHeader->topNav,
-    ]) ?>
-    <?php //echo \Yii::$app->fragmentHeader->buildTopNav('//layouts/base/fragments/_header'); ?>
+    ]); ?>
+    <?php //echo \Yii::$app->fragmentHeader->buildTopNav('//layouts/base/fragments/_header');?>
     <!--------------------------------------------------------------------------
                                 center block
     ----------------------------------------------------------------------------
@@ -52,7 +47,7 @@ AppAsset::register($this);
         
     <?php endforeach; ?>    
         
-    <?= $content ?>
+    <?= $content; ?>
 
     </div>
     
@@ -60,10 +55,12 @@ AppAsset::register($this);
 
 </div>
     
-<?= $this->render('//layouts/base/fragments/_footer') ?>
+<?= $this->render('//layouts/base/fragments/_footer'); ?>
 
-<?php $this->endBody() ?>
-<?php echo $this->render('//layouts/base/fragments/_counter') ?>    
+<?php $this->endBody(); ?>
+<?php if (YII_WORK_SERVER) {
+        echo $this->render('//layouts/base/fragments/_counter');
+    } ?>    
 </body>
 </html>
-<?php $this->endPage() ?>
+<?php $this->endPage(); ?>
