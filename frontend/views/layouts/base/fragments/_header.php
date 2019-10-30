@@ -10,6 +10,55 @@
 //use yii;
 use yii\helpers\Url;
 use common\components\rbac\Rbac;
+use yii\web\Cookie;
+use yii\db\ActiveRecord;
+
+$row = Yii::$app->db->createCommand('SELECT ba.*, bc.title AS category_title FROM `blogArticles` AS ba 
+    LEFT JOIN `blogCategories` AS bc ON ba.idCategory = bc.id')
+             ->queryOne();
+
+$rowCat = array('title' => $row['category_title']);
+
+var_dump($row);
+
+/*
+public static function instantiate($row)
+{
+    switch ($row['type']) {
+        case SportCar::TYPE:
+            return new SportCar();
+        case HeavyCar::TYPE:
+            return new HeavyCar();
+        default:
+           return new self;
+    }
+}
+*/
+$recordArt = \frontend\models\blog\articles\BlogArticles::instantiate($row);
+$recordCat = \frontend\models\blog\categories\BlogCategories::instantiate($row);
+
+$recordArtClass = get_class($recordArt);
+$recordCatClass = get_class($recordCat);
+
+$recordArtClass::populateRecord($recordArt, $row);
+$recordCatClass::populateRecord($recordCat, $rowCat);
+
+
+var_dump($recordArt);
+var_dump($recordCat);
+
+// $cName = isset($params['counter_cookie_name']) ? $params['counter_cookie_name'] : 'test_cookie';
+//         //Если имя куки не передано, значит и не назначено в приложении. Или если имя
+//         //передано, но куки не установлены - сделаем это тут...
+//         $counter = Yii::$app->request->cookies->getValue($cName, 0);
+//         Yii::$app->response->cookies->remove($cName);
+//         Yii::$app->response->cookies->add(new Cookie([
+//             'name' => $cName,
+//             'value' => ++$counter,//eny
+//             'expire' => time() + 86400 * 365,
+//         ]));
+//         echo $counter;
+// var_dump(\Yii::$app->authManager->getDefaultRoles());
 
 ?>
 

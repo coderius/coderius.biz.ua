@@ -10,10 +10,13 @@
 
 namespace common\components\rbac;
  
-class Rbac
+final class Rbac
 {
     const PERMISSION_ADMIN_PANEL = 'permAdminPanel';
+    const PERM_FREQUENT_VISITOR = 'perm-frequent-visitor';
     
     const ROLE_ADMIN = 'admin';
     const ROLE_USER = 'user';
+    const ROLE_GUEST = 'guest';
+
 }

@@ -26,6 +26,7 @@ $conf = [
 
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
+            'defaultRoles' => ['guest'],
         ],
 
         // перевод
