@@ -63,6 +63,7 @@ use common\widgets\IosStyleToggleSwitch\IosStyleToggleSwitchWidget;
     $csrf_token = \Yii::$app->request->csrfToken;
     
     ?>
+    
     <?= $form->field($model, 'text')->widget(TinyMce::className(), [
     'options' => ['rows' => 12],
     'language' => 'ru',
@@ -73,12 +74,7 @@ use common\widgets\IosStyleToggleSwitch\IosStyleToggleSwitchWidget;
 //        'toolbar'=> "codesample",
         
 //        'theme' => "advanced",
-
-        //Set absolute url in image src
-        // 'relative_urls' => false,
-        // 'remove_script_host' => false,
-        // 'convert_urls' => true,
-
+        
         //set br for enter
         'force_br_newlines' => true,
         'force_p_newlines' => false,
@@ -205,7 +201,7 @@ use common\widgets\IosStyleToggleSwitch\IosStyleToggleSwitchWidget;
         'automatic_uploads' => true,
         'file_picker_types'=> 'image',
         
-        'toolbar' => "codesample | my-codeblock | undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image imageupload | fontselect | cut copy paste | nonbreaking | fullscreen | code | forecolor backcolor",
+        'toolbar' => "codesample | my-codeblock | undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link anchor image imageupload | fontselect | cut copy paste | nonbreaking | fullscreen | code | forecolor backcolor",
         'codesample_dialog_height' => new JsExpression("$( window ).height()"),//for codesample
         "codesample_languages"=> new JsExpression("[
             {text: 'PHP', value: 'php'},

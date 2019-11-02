@@ -94,6 +94,17 @@ class BlogArticles extends \yii\db\ActiveRecord
         ];
     }
 
+    // public function afterSave($insert, $changedAttributes)
+    // {
+    //     // parent::afterSave($insert, $changedAttributes);
+    //     $relatedRecords = $this->getRelatedRecords();
+        
+    //     if (isset($relatedRecords['category'])) {
+    //         $this->link('category', $relatedRecords['category']);
+    //     }
+    //     var_dump($relatedRecords);
+    // }
+
     //обработчик события
     public function registerVisit($event)
     {

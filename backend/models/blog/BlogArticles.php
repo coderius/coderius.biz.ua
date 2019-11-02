@@ -214,6 +214,8 @@ class BlogArticles extends \yii\db\ActiveRecord
                                 $def->addAttribute('a', 'id', 'Text');
                                 $def->addAttribute('img', 'class', 'Text');
                                 $def->addAttribute('a', 'target', 'Text');
+                                $def->addAttribute('a', 'name', 'ID');
+                                $config->set('Attr.EnableID', true);
                                 $config->set('HTML.SafeIframe', true);
                                 $config->set('URI.SafeIframeRegexp', '%^(https?:)?//(www\.youtube(?:-nocookie)?\.com/embed/|player\.vimeo\.com/video/)%'); //allow YouTube and Vimeo
                             }
