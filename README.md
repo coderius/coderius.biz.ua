@@ -1,4 +1,4 @@
-#Yii2 E-Magazine website
+# Yii2 E-Magazine website
 
 E-Magazine app website is under development process.
 
