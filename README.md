@@ -1,6 +1,8 @@
-#Coderius blog
+#Yii2 Emagazine website
 
-This is my blog project.
+Emagazine app website is under development process.
+
+Created on Yii2 php framework.
 
 DIRECTORY STRUCTURE
 -------------------
