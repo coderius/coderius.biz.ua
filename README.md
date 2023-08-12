@@ -1,6 +1,6 @@
-#Yii2 Emagazine website
+#Yii2 E-Magazine website
 
-Emagazine app website is under development process.
+E-Magazine app website is under development process.
 
 Created on Yii2 php framework.
 
